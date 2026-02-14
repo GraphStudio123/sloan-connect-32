@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Search, UserPlus } from "lucide-react";
 import { getStudents } from "@/lib/students";
 import StudentCard from "@/components/StudentCard";
+import SloanLogo from "@/components/SloanLogo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -27,9 +28,12 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-border bg-card/80 backdrop-blur-md">
         <div className="container flex items-center justify-between py-4">
-          <div>
-            <h1 className="text-xl font-bold text-primary tracking-tight">Sloan Connect</h1>
-            <p className="text-xs text-muted-foreground">MIT Sloan MBA Directory</p>
+          <div className="flex items-center gap-3">
+            <SloanLogo className="h-8" />
+            <div>
+              <h1 className="text-xl font-bold text-primary tracking-tight">Sloan Connect</h1>
+              <p className="text-xs text-muted-foreground">MIT Sloan MBA Directory</p>
+            </div>
           </div>
           <Button onClick={() => navigate("/add")} size="sm">
             <UserPlus className="mr-1.5 h-4 w-4" />
